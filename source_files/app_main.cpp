@@ -14,11 +14,11 @@
  * 
  * @return bool Returns true if all configurations are successful, false otherwise.
  */
-bool ATSAMV71_configure() 
+bool gpio_configure() 
 {
     std::cout << " \n";
     std::cout << "------------------------------\n";
-    std::cout << "Running ATSAMV71 configuration\n";
+    std::cout << "Running configuration\n";
     std::cout << "------------------------------\n";
 
     // Configure PA1 as UART0 Tx
@@ -53,11 +53,11 @@ bool ATSAMV71_configure()
  * 
  * @return bool Returns true if operations were executed, false if an error occurred.
  */
-bool ATSAMV71_run() 
+bool app_run() 
 {
     std::cout << " \n";
     std::cout << "------------------------------\n";
-    std::cout << "Running ATSAMV71 app\n";
+    std::cout << "Running app\n";
     std::cout << "------------------------------\n";
 
     // Read PB12 state
@@ -81,9 +81,9 @@ bool ATSAMV71_run()
  */
 int main() 
 {
-    if (ATSAMV71_configure()) 
+    if (gpio_configure()) 
     {
-        ATSAMV71_run();
+        app_run();
     }
     else
     {
