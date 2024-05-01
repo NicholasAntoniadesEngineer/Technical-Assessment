@@ -7,9 +7,12 @@
 #include "ATSAMV71.h"
 
 /**
- * Main configuration function that sets up all GPIOs.
+ * @brief Configures all necessary GPIOs for ATSAMV71.
  * 
- * @return bool true if all configurations are successful, false otherwise
+ * Sets up several GPIO pins for different functions including UART transmission, reception,
+ * analog functionality, and standard input/output settings.
+ * 
+ * @return bool Returns true if all configurations are successful, false otherwise.
  */
 bool ATSAMV71_configure() 
 {
@@ -43,6 +46,13 @@ bool ATSAMV71_configure()
     return true;
 }
 
+/**
+ * @brief Runs operational tests on configured GPIOs.
+ * 
+ * Reads the state of PB12 and sets the output states of PC9 and PC10.
+ * 
+ * @return bool Returns true if operations were executed, false if an error occurred.
+ */
 bool ATSAMV71_run() 
 {
     std::cout << " \n";
@@ -63,9 +73,11 @@ bool ATSAMV71_run()
 }
 
 /**
- * Entry point of the program.
+ * @brief Main entry point of the program.
  * 
- * @return int The exit status of the program, 0 on successful configuration
+ * Initializes the system by configuring GPIOs and then running operational tests.
+ * 
+ * @return int Returns 0 on successful execution and configuration, 1 on failure.
  */
 int main() 
 {
