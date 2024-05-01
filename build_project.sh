@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "/Users/Nicholas/Desktop/Embedded_Software_Homework/build"
+cd "build"
 
 echo "Cleaning up old build files..."
 rm -rf *
