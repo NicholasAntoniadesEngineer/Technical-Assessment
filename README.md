@@ -37,6 +37,6 @@ Development Sequencing/Prioritization:
 5. Continuous Integration: Use CI/CD pipelines to ensure that changes are tested and validated continuously.
 
 Adaptation Without IMUs:
-6. Mock Modules: Develop mock modules for IMUs to allow software development and testing to proceed.
-7. Simulation: Utilize software simulations to validate algorithms and other integrations.
-8. Incremental Integration: Plan for an incremental integration phase where real IMUs will replace mock modules when available.
+1. Mock Modules: Develop mock modules for IMUs to allow software development and testing to proceed.
+2. Simulation: Utilize software simulations to validate algorithms and other integrations.
+3. Incremental Integration: Plan for an incremental integration phase where real IMUs will replace mock modules when available.
