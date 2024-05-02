@@ -1,12 +1,9 @@
 # Technical Assessment
-This repo will be used to hold the assignment set out as part of the interview process for an embedded software role:
-
+This repo will be used to hold the assignment set out as part of the interview process for an embedded software role.
 
 # Building the project and running the demo app
 
-
 1. To build the project run ./build_project.sh
-
 2. To run the demo app enter the build directory and run ./AppMain
 
 # Open subject for reflection
