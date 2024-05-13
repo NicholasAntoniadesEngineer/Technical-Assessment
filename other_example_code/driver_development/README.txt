@@ -1,19 +1,16 @@
--------------
-Overview
--------------
+
+#Overview
+
 This driver provides functionality to interface with VectorNav sensors via UART communication.
 
--------------
-Dependencies
--------------
+#Dependencies
 
 - console_commands.h: Header file for console commands.
 - driver_uart.h: Header file for UART driver.
 - driver_vectornav.h: Header file for VectorNav driver.
 
--------------
-Usage
--------------
+
+#Usage
 
 1. Initialize the VectorNav driver using driver_vectornav_init.
 2. Configure the VectorNav driver using driver_vectornav_configure.
