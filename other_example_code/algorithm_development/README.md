@@ -2,9 +2,14 @@
 # Overview
 
 This repository contains example code for patch position calculations and unit tests for verifying the correctness of the algorithms implemented. 
-The code includes a C file (`patch_position_calculation.c`) implementing functions for calculating patch positions within an array and updating patch positions 
-based on array rotation. Additionally, there is a Python prototype script (`matrix_translation_rotation_prototype.py`) that demonstrates the translation 
+
+Initially, there is a Python prototype script (`matrix_translation_rotation_prototype.py`) that demonstrates the translation 
 and rotation of patches in a matrix.
+
+The C file is implemented (`patch_position_calculation.c`) implementing functions for calculating patch positions within an array and updating patch positions 
+based on array rotation. 
+
+Finally the C implementation is unit tested with the gtest framework (`patch_position_calculations_test.cpp`)
 
 # Files
 
@@ -30,7 +35,7 @@ These tests ensure the correctness of the algorithms by comparing the calculated
 1. Run the `matrix_translation_rotation_prototype.py` script.
 2. Adjust the test cases in the `main()` function to test different array sizes and rotations.
 
-## Unit Tests
+## CPP Unit Tests
 1. Include the `patch_position_calculations_test.cpp` file in your testing framework.
 2. Ensure that the necessary dependencies, such as Google Test (`gtest`), are set up in your project.
 3. Run the unit tests to verify the correctness of the patch position calculation functions.
