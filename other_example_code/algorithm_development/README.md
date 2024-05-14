@@ -24,8 +24,6 @@ patch_position_calculations_test.cpp:
 Unit tests for the patch position calculation functions implemented in patch_position_calculation.c. 
 These tests ensure the correctness of the algorithms by comparing the calculated patch positions with expected values.
 
-#Usage
-
 ## C Code
 1. Include the `patch_position_calculation.c` file in your project.
 2. Include the `config.h` header file if configuration constants are required.
