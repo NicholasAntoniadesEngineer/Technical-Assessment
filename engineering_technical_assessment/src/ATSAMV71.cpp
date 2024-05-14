@@ -6,6 +6,41 @@
 #include "ATSAMV71.h"
 #include <iostream>
 
+#ifdef MOCK_TEST
+// Mock implementation
+
+bool GPIO::configure(Port port, int pin, Function function, Mode mode) 
+{
+    std::cout << "Mock configuring GPIO \n";
+    std::cout << " - Port     : " << static_cast<int>(port) << "\n";
+    std::cout << " - Pin      : " << pin << "\n";   
+    std::cout << " - Function : " << static_cast<int>(function) << "\n";
+    std::cout << " - Mode     : " << static_cast<int>(mode) << "\n";
+    std::cout << " \n";
+    return true;
+}
+
+bool GPIO::set(Port port, int pin, bool pin_state) 
+{
+    std::cout << "Mock setting GPIO \n";  
+    std::cout << " - Port   : " << static_cast<int>(port) << "\n";
+    std::cout << " - Pin    : " << pin << "\n";  
+    std::cout << " - State  : " << pin_state << "\n";  
+    std::cout << " \n";
+    return true;
+}
+
+bool GPIO::read(Port port, int pin) 
+{
+    std::cout << "Mock read GPIO \n";
+    std::cout << " - Port   : " << static_cast<int>(port) << "\n";
+    std::cout << " - Pin    : " << pin << "\n";     
+    std::cout << " \n";
+    return true;
+}
+
+#else
+
 /**
  * Configures a specific GPIO pin.
  * 
@@ -15,6 +50,7 @@
  * @param mode Mode of GPIO 
  * @return bool true if successful, false otherwise
  */
+
 bool GPIO::configure(Port port, int pin, Function function, Mode mode) 
 {
     uintptr_t pio_base_addr;
@@ -44,8 +80,9 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
 
     // Enable peripheral clock for the selected port
     *((volatile uint32_t *)(PMC_BASE_ADDR + pmc_pcer_offset)) |= (1 << (port == PIOA ? 11 : 
-                                                                        port == PIOB ? 12 : 
-                                                                        port == PIOC ? 13 :  14));  
+                                                                       port == PIOB ? 12 : 
+                                                                       port == PIOC ? 13 : 
+                                                                                      14));  
 
     // Configure the pin mode
     if (mode == OUTPUT) {
@@ -152,5 +189,6 @@ bool GPIO::read(Port port, int pin)
 }
 
 
+#endif
 
 
