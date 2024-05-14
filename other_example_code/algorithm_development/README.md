@@ -1,7 +1,7 @@
 
 # Overview
 
-This repository contains example code for patch position calculations and unit tests for verifying the correctness of the algorithms implemented. 
+This repository contains example code for calculating the patch position for a 16 by 16 nphased array antenna module. It includes the calculations and unit tests for verifying the correctness of the algorithms implemented. 
 
 Initially, there is a Python prototype script (`patch_translation_rotation_prototype.py`) that demonstrates the translation 
 and rotation of patches in a matrix.
