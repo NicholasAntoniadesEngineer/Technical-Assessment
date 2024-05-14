@@ -31,21 +31,29 @@ typedef enum {
 } Port;
 
 typedef enum {
-    INPUT,
-    OUTPUT
-} Mode;
-
-typedef enum {
     PERIPHERAL_A,
     PERIPHERAL_B,
-    // Add more peripheral functions as needed
+    UART0,
+    AF,
+    Input,
+    Output
 } Function;
+
+typedef enum {
+    INPUT,
+    OUTPUT,
+    Tx,
+    Rx,
+    AF1,
+    PullUp,
+    NoPull
+} Mode;
 
 class GPIO {
 public:
-    bool configure(Port port, int pin, Function function, Mode mode);
-    bool set(Port port, int pin, bool pin_state);
-    bool read(Port port, int pin);
+    static bool configure(Port port, int pin, Function function, Mode mode);
+    static bool set(Port port, int pin, bool pin_state);
+    static bool read(Port port, int pin);
 };
 
 #endif

@@ -44,9 +44,9 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
 
     // Enable peripheral clock for the selected port
     *((volatile uint32_t *)(PMC_BASE_ADDR + pmc_pcer_offset)) |= (1 << (port == PIOA ? 11 : 
-                                                                       port == PIOB ? 12 : 
-                                                                       port == PIOC ? 13 : 
-                                                                                      14));                                          14));
+                                                                        port == PIOB ? 12 : 
+                                                                        port == PIOC ? 13 : 
+                                                                                      14));  
 
     // Configure the pin mode
     if (mode == OUTPUT) {

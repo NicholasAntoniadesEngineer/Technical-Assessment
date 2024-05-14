@@ -1,0 +1,3 @@
+/Users/Nicholas/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles/AppMain.dir
+/Users/Nicholas/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles/edit_cache.dir
+/Users/Nicholas/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles/rebuild_cache.dir

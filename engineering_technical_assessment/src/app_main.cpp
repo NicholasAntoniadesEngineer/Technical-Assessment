@@ -22,22 +22,22 @@ bool gpio_configure()
     std::cout << "------------------------------\n";
 
     // Configure PA1 as UART0 Tx
-    if (!GPIO::configure(Port::PA, 1, Function::UART0, Mode::Tx)) return false;
+    if (!GPIO::configure(Port::PIOA, 1, Function::UART0, Mode::Tx)) return false;
 
     // Configure PA9 as UART0 Rx
-    if (!GPIO::configure(Port::PA, 9, Function::UART0, Mode::Rx)) return false;
+    if (!GPIO::configure(Port::PIOA, 9, Function::UART0, Mode::Rx)) return false;
 
     // Configure PB1 as AFEC 1 Channel 0
-    if (!GPIO::configure(Port::PB, 1, Function::AF, Mode::AF1)) return false;
+    if (!GPIO::configure(Port::PIOB, 1, Function::AF, Mode::AF1)) return false;
 
     // Configure PB12 as input with pull-up
-    if (!GPIO::configure(Port::PB, 12, Function::Input, Mode::PullUp)) return false;
+    if (!GPIO::configure(Port::PIOB, 12, Function::Input, Mode::PullUp)) return false;
 
     // Configure PC9 as output
-    if (!GPIO::configure(Port::PC, 9, Function::Output, Mode::NoPull)) return false;
+    if (!GPIO::configure(Port::PIOC, 9, Function::Output, Mode::NoPull)) return false;
 
     // Configure PC10 as output
-    if (!GPIO::configure(Port::PC, 10, Function::Output, Mode::NoPull)) return false;
+    if (!GPIO::configure(Port::PIOC, 10, Function::Output, Mode::NoPull)) return false;
 
     std::cout << "------------------------------\n";
     std::cout << "Configuration Successful\n";
@@ -61,13 +61,13 @@ bool app_run()
     std::cout << "------------------------------\n";
 
     // Read PB12 state
-    GPIO::read(Port::PB, 12);
+    GPIO::read(Port::PIOB, 12);
 
     // Set PC9 to high
-    GPIO::set(Port::PC, 9, true);
+    GPIO::set(Port::PIOC, 9, true);
 
     // Set PC10 to low
-    GPIO::set(Port::PC, 10, false);
+    GPIO::set(Port::PIOC, 10, false);
 
     return true; 
 }
