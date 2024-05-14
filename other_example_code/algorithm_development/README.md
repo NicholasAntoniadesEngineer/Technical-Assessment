@@ -33,7 +33,7 @@ These tests ensure the correctness of the algorithms by comparing the calculated
 2. Include the `config.h` header file if configuration constants are required.
 3. Call the functions `project_algorithms_init_patches`, `project_algorithms_calc_patch_pose`, and `project_algorithms_rot_pos_update` as needed to calculate patch positions and update them based on array rotation.
 
-## CPP Unit Tests
+## Cpp Unit Tests
 1. Include the `patch_position_calculations_test.cpp` file in your testing framework.
 2. Ensure that the necessary dependencies, such as Google Test (`gtest`), are set up in your project.
 3. Run the unit tests to verify the correctness of the patch position calculation functions.
