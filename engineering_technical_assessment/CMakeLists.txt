@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_definitions(-DMOCK_TEST)
+# add_definitions(-DMOCK_TEST)
 
 # Add executable target with source files
 add_executable(AppMain ${CMAKE_CURRENT_SOURCE_DIR}/src/app_main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/ATSAMV71.cpp)

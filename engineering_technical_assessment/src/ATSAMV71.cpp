@@ -40,6 +40,7 @@ bool GPIO::read(Port port, int pin)
 }
 
 #else
+// Compile with hardware memory address
 
 /**
  * Configures a specific GPIO pin.
