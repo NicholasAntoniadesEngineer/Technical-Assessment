@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # 
-# @file matrix_translation_rotation_prototype.py
+# @file patch_translation_rotation_prototype.py
 # @brief This script is used to prototype the matrix rotation function that will be implemented in c.
 # 
 # @author Nicholas Antoniades
