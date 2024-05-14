@@ -1,12 +1,12 @@
 
-#Overview
+# Overview
 
 This repository contains example code for patch position calculations and unit tests for verifying the correctness of the algorithms implemented. 
 The code includes a C file (`patch_position_calculation.c`) implementing functions for calculating patch positions within an array and updating patch positions 
 based on array rotation. Additionally, there is a Python prototype script (`matrix_translation_rotation_prototype.py`) that demonstrates the translation 
 and rotation of patches in a matrix.
 
-#Files
+# Files
 
 patch_position_calculation.c: 
 This C file contains functions for calculating patch positions within an array and updating patch positions based on array rotation. 
