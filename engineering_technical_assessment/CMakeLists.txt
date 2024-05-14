@@ -9,6 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+<<<<<<< Updated upstream
+=======
+# Sets wether or nor this will be compiled to run on the laptop or the target processor
+>>>>>>> Stashed changes
 add_definitions(-DMOCK_TEST)
 
 # Add executable target with source files
