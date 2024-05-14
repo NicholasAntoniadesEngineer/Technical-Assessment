@@ -69,44 +69,44 @@ include CMakeFiles/AppMain.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AppMain.dir/flags.make
 
-CMakeFiles/AppMain.dir/source_files/app_main.cpp.o: CMakeFiles/AppMain.dir/flags.make
-CMakeFiles/AppMain.dir/source_files/app_main.cpp.o: /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/app_main.cpp
-CMakeFiles/AppMain.dir/source_files/app_main.cpp.o: CMakeFiles/AppMain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AppMain.dir/source_files/app_main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AppMain.dir/source_files/app_main.cpp.o -MF CMakeFiles/AppMain.dir/source_files/app_main.cpp.o.d -o CMakeFiles/AppMain.dir/source_files/app_main.cpp.o -c /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/app_main.cpp
+CMakeFiles/AppMain.dir/src/app_main.cpp.o: CMakeFiles/AppMain.dir/flags.make
+CMakeFiles/AppMain.dir/src/app_main.cpp.o: /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/app_main.cpp
+CMakeFiles/AppMain.dir/src/app_main.cpp.o: CMakeFiles/AppMain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AppMain.dir/src/app_main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AppMain.dir/src/app_main.cpp.o -MF CMakeFiles/AppMain.dir/src/app_main.cpp.o.d -o CMakeFiles/AppMain.dir/src/app_main.cpp.o -c /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/app_main.cpp
 
-CMakeFiles/AppMain.dir/source_files/app_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AppMain.dir/source_files/app_main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/app_main.cpp > CMakeFiles/AppMain.dir/source_files/app_main.cpp.i
+CMakeFiles/AppMain.dir/src/app_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AppMain.dir/src/app_main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/app_main.cpp > CMakeFiles/AppMain.dir/src/app_main.cpp.i
 
-CMakeFiles/AppMain.dir/source_files/app_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AppMain.dir/source_files/app_main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/app_main.cpp -o CMakeFiles/AppMain.dir/source_files/app_main.cpp.s
+CMakeFiles/AppMain.dir/src/app_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AppMain.dir/src/app_main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/app_main.cpp -o CMakeFiles/AppMain.dir/src/app_main.cpp.s
 
-CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o: CMakeFiles/AppMain.dir/flags.make
-CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o: /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/ATSAMV71.cpp
-CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o: CMakeFiles/AppMain.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o -MF CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o.d -o CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o -c /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/ATSAMV71.cpp
+CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o: CMakeFiles/AppMain.dir/flags.make
+CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o: /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/ATSAMV71.cpp
+CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o: CMakeFiles/AppMain.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o -MF CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o.d -o CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o -c /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/ATSAMV71.cpp
 
-CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/ATSAMV71.cpp > CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.i
+CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/ATSAMV71.cpp > CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.i
 
-CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/source_files/ATSAMV71.cpp -o CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.s
+CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/src/ATSAMV71.cpp -o CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.s
 
 # Object files for target AppMain
 AppMain_OBJECTS = \
-"CMakeFiles/AppMain.dir/source_files/app_main.cpp.o" \
-"CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o"
+"CMakeFiles/AppMain.dir/src/app_main.cpp.o" \
+"CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o"
 
 # External object files for target AppMain
 AppMain_EXTERNAL_OBJECTS =
 
-AppMain: CMakeFiles/AppMain.dir/source_files/app_main.cpp.o
-AppMain: CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o
+AppMain: CMakeFiles/AppMain.dir/src/app_main.cpp.o
+AppMain: CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o
 AppMain: CMakeFiles/AppMain.dir/build.make
 AppMain: CMakeFiles/AppMain.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/Nicholas/Desktop/GIT/engineering_technical_assessment/engineering_technical_assessment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AppMain"

@@ -10,5 +10,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # Add executable target with source files
-add_executable(AppMain ${CMAKE_CURRENT_SOURCE_DIR}/source_files/app_main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/source_files/ATSAMV71.cpp)
+add_executable(AppMain ${CMAKE_CURRENT_SOURCE_DIR}/src/app_main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/ATSAMV71.cpp)
 

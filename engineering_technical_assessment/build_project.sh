@@ -6,7 +6,7 @@ echo "Cleaning up old build files..."
 rm -rf *
 
 echo "Configuring the build with CMake..."
-cmake ..
+cmake ../
 
 if [ $? -ne 0 ]; then
     echo "CMake configuration failed!"

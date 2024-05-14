@@ -129,53 +129,53 @@ AppMain/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/build
 .PHONY : AppMain/fast
 
-source_files/ATSAMV71.o: source_files/ATSAMV71.cpp.o
-.PHONY : source_files/ATSAMV71.o
+src/ATSAMV71.o: src/ATSAMV71.cpp.o
+.PHONY : src/ATSAMV71.o
 
 # target to build an object file
-source_files/ATSAMV71.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.o
-.PHONY : source_files/ATSAMV71.cpp.o
+src/ATSAMV71.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.o
+.PHONY : src/ATSAMV71.cpp.o
 
-source_files/ATSAMV71.i: source_files/ATSAMV71.cpp.i
-.PHONY : source_files/ATSAMV71.i
+src/ATSAMV71.i: src/ATSAMV71.cpp.i
+.PHONY : src/ATSAMV71.i
 
 # target to preprocess a source file
-source_files/ATSAMV71.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.i
-.PHONY : source_files/ATSAMV71.cpp.i
+src/ATSAMV71.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.i
+.PHONY : src/ATSAMV71.cpp.i
 
-source_files/ATSAMV71.s: source_files/ATSAMV71.cpp.s
-.PHONY : source_files/ATSAMV71.s
+src/ATSAMV71.s: src/ATSAMV71.cpp.s
+.PHONY : src/ATSAMV71.s
 
 # target to generate assembly for a file
-source_files/ATSAMV71.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/ATSAMV71.cpp.s
-.PHONY : source_files/ATSAMV71.cpp.s
+src/ATSAMV71.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/ATSAMV71.cpp.s
+.PHONY : src/ATSAMV71.cpp.s
 
-source_files/app_main.o: source_files/app_main.cpp.o
-.PHONY : source_files/app_main.o
+src/app_main.o: src/app_main.cpp.o
+.PHONY : src/app_main.o
 
 # target to build an object file
-source_files/app_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/app_main.cpp.o
-.PHONY : source_files/app_main.cpp.o
+src/app_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/app_main.cpp.o
+.PHONY : src/app_main.cpp.o
 
-source_files/app_main.i: source_files/app_main.cpp.i
-.PHONY : source_files/app_main.i
+src/app_main.i: src/app_main.cpp.i
+.PHONY : src/app_main.i
 
 # target to preprocess a source file
-source_files/app_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/app_main.cpp.i
-.PHONY : source_files/app_main.cpp.i
+src/app_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/app_main.cpp.i
+.PHONY : src/app_main.cpp.i
 
-source_files/app_main.s: source_files/app_main.cpp.s
-.PHONY : source_files/app_main.s
+src/app_main.s: src/app_main.cpp.s
+.PHONY : src/app_main.s
 
 # target to generate assembly for a file
-source_files/app_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/source_files/app_main.cpp.s
-.PHONY : source_files/app_main.cpp.s
+src/app_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AppMain.dir/build.make CMakeFiles/AppMain.dir/src/app_main.cpp.s
+.PHONY : src/app_main.cpp.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AppMain"
-	@echo "... source_files/ATSAMV71.o"
-	@echo "... source_files/ATSAMV71.i"
-	@echo "... source_files/ATSAMV71.s"
-	@echo "... source_files/app_main.o"
-	@echo "... source_files/app_main.i"
-	@echo "... source_files/app_main.s"
+	@echo "... src/ATSAMV71.o"
+	@echo "... src/ATSAMV71.i"
+	@echo "... src/ATSAMV71.s"
+	@echo "... src/app_main.o"
+	@echo "... src/app_main.i"
+	@echo "... src/app_main.s"
 .PHONY : help
 
 
