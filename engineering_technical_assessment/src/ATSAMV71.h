@@ -42,7 +42,7 @@ typedef enum {
 #define PIOD_BASE_ADDR 0x400E1400U   // Base address for PIOD (Parallel I/O Controller D)
 
 #define PMC_PCER0_OFFSET 0x0010U     // Offset for PMC_PCER0 (Peripheral Clock Enable Register 0)
-#define PMC_PCER1_OFFSET 0x0014U     // Offset for PMC_PCER1 (Peripheral Clock Enable Register 1)
+#define PMC_PCER1_OFFSET 0x0100U     // Offset for PMC_PCER1 (Peripheral Clock Enable Register 1)
 
 #define PIO_OER_OFFSET 0x0010U       // Offset for PIO_OER (Output Enable Register)
 #define PIO_ODR_OFFSET 0x0014U       // Offset for PIO_ODR (Output Disable Register)
