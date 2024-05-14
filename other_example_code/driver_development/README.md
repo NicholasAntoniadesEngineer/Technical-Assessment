@@ -1,7 +1,7 @@
 
 # Overview
 
-This driver provides functionality to interface with VectorNav sensors via UART communication.
+This driver provides the functionality to interface with VectorNav device via UART communication.
 
 #Dependencies
 
