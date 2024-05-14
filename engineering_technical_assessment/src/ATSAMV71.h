@@ -23,6 +23,8 @@
 #define PIO_CODR_OFFSET 0x0034U      // Offset for PIO_CODR (Clear Output Data Register)
 #define PIO_PDSR_OFFSET 0x003CU      // Offset for PIO_PDSR (Pin Data Status Register)
 
+#define REG32(addr) (*(volatile uint32_t *)(addr))
+
 typedef enum {
     PIOA,
     PIOB,

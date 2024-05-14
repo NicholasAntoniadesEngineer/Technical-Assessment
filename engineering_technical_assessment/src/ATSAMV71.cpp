@@ -17,8 +17,8 @@
  */
 bool GPIO::configure(Port port, int pin, Function function, Mode mode) 
 {
-    uint32_t pio_base_addr;
-    uint32_t pmc_pcer_offset;
+    uintptr_t pio_base_addr;
+    uintptr_t pmc_pcer_offset;
 
     // Select which port to use
     switch(port) {
@@ -45,8 +45,7 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
     // Enable peripheral clock for the selected port
     *((volatile uint32_t *)(PMC_BASE_ADDR + pmc_pcer_offset)) |= (1 << (port == PIOA ? 11 : 
                                                                         port == PIOB ? 12 : 
-                                                                        port == PIOC ? 13 : 
-                                                                                      14));  
+                                                                        port == PIOC ? 13 :  14));  
 
     // Configure the pin mode
     if (mode == OUTPUT) {
@@ -75,7 +74,7 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
  */
 bool GPIO::set(Port port, int pin, bool pin_state) 
 {
-    uint32_t pio_base_addr;
+    uintptr_t pio_base_addr;
 
     // Select which port to use
     switch(port) {
@@ -120,7 +119,7 @@ bool GPIO::set(Port port, int pin, bool pin_state)
  */
 bool GPIO::read(Port port, int pin) 
 {
-    uint32_t pio_base_addr;
+    uintptr_t pio_base_addr;
 
     // Select which port to use
     switch(port) {
