@@ -17,8 +17,8 @@
 
 extern "C" 
 {
-    #include "project_algorithms-algorithms_board_metadata_provider.h"
-    #include "project_algorithms_algorithm_tile.h"
+    #include "project_metadata_provider.h"
+    #include "patch_position_calculation.h"
     #include "config.h"
 }
 

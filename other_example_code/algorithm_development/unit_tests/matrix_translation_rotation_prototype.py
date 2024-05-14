@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # 
-# @file r2_algorithm_translation_rotation_prototype.py
+# @file matrix_translation_rotation_prototype.py
+# @brief This script is used to prototype the matrix rotation function that will be implemented in c.
+# 
 # @author Nicholas Antoniades
 # @date 2 April 2024
-#
-# Description:
-# This script is used to prototype the matrix rotation function that will be implemented in c.
+# 
+
 
  
 PROJECT_ARRAY_PATCH_SPACING = 1 
