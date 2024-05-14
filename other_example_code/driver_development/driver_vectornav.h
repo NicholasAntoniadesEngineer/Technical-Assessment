@@ -4,10 +4,10 @@
  */
 #pragma once
 
-#include "config.h"
 #include <stdbool.h>
 
-#include ".h"
+#include "config.h"
+
 #include "driver_uart.h"
 #include "console_commands.h"
 
