@@ -13,12 +13,12 @@ Finally the C implementation is unit tested with the gtest framework (`patch_pos
 
 # Files
 
-patch_position_calculation.c: 
-This C file contains functions for calculating patch positions within an array and updating patch positions based on array rotation. 
-
 matrix_translation_rotation_prototype.py: 
 This Python script is a prototype for matrix translation and rotation. It demonstrates the translation of patches within a matrix and their rotation by 90,
 180, or 270 degrees.
+
+patch_position_calculation.c: 
+This C file contains functions for calculating patch positions within an array and updating patch positions based on array rotation. 
 
 patch_position_calculations_test.cpp: 
 Unit tests for the patch position calculation functions implemented in patch_position_calculation.c. 
