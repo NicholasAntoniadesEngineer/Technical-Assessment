@@ -1,7 +1,16 @@
 /**
+ * @file driver_vectornav.c
+ * @brief Implementation of the VectorNav driver functions.
+ * 
+ * This file contains the functions necessary to initialize, configure, and communicate with the VectorNav sensor.
+ * It includes initialization, configuration, and callback functions, as well as functions for sending and receiving data
+ * via UART, setting sensor configurations, and reading/writing sensor registers.
+ * 
  * @author Nicholas Antoniades
- * @date Jan 15, 2023
+ * @date 15 Jan 2024
+ *
  */
+
 
 #include <string.h>
 #include <stdio.h>
