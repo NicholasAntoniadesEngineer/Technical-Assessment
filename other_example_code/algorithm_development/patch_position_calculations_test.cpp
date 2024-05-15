@@ -1,6 +1,13 @@
 /**
  * @file patch_position_calculations_test.cpp
- * @brief Unit tests for the patch orientation step of the pipeline
+ * @brief Unit tests for patch position calculations in the tile array.
+ * 
+ * This file contains Google Test-based unit tests to verify the correctness of the patch position
+ * calculations in the tile array. It includes functions to read expected poses from CSV files, 
+ * compare calculated poses with expected values, and print/save poses for debugging purposes.
+ * 
+ * The tests cover various scenarios including initial pose calculations for different columns and rows,
+ * as well as pose updates after rotations of the tile array by 90, 180, and 270 degrees.
  * 
  * @author Nicholas Antoniades
  * @date 27 April 2024
