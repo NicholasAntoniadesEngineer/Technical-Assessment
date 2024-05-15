@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 # 
 # @file patch_translation_rotation_prototype.py
-# @brief This script is used to prototype the matrix rotation function that will be implemented in c.
+# @brief Prototype for patch translation and rotation in a tile array.
+# 
+# This script provides functions to calculate the positions of patches in a tile array,
+# apply rotations to the array and print the resulting patch positions. It includes
+# a Patch class for defining patch poses, functions for translating and rotating patches,
+# and test cases to validate the implementation.
 # 
 # @author Nicholas Antoniades
 # @date 2 April 2024
