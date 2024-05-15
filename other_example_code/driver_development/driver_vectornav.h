@@ -1,7 +1,17 @@
 /**
+ * @file driver_vectornav.h
+ * @brief Header file for the VectorNav driver.
+ * 
+ * This file contains the definitions and function prototypes for the VectorNav driver.
+ * It includes configuration structures, enumerations for message types and register IDs,
+ * and function declarations for initializing, configuring, and communicating with the 
+ * VectorNav sensor.
+ * 
  * @author Nicholas Antoniades
- * @date Jan 15, 2023
+ * @date 15 Jan 2024
+ *
  */
+
 #pragma once
 
 #include <stdbool.h>
