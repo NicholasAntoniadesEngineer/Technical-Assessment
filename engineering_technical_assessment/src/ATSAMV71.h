@@ -1,6 +1,12 @@
 /**
- * ATSAMV71.h
- * Author: Nicholas
+ * @file ATSAMV71.h
+ * @brief Header file for GPIO control on ATSAMV71 microcontroller.
+ *
+ * Defines the types, constants, and function prototypes for configuring, setting, and reading 
+ * GPIO pins on the ATSAMV71. Includes memory addresses and offsets for relevant registers.
+ * 
+ * @author Nicholas Antoniades
+ * @date 29 April 2024
  */
 
 #ifndef ATSAMV71_H
