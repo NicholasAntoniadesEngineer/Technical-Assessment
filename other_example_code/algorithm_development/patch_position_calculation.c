@@ -1,9 +1,10 @@
 /**
  * @file patch_position_calculation.c
- * @brief This file contains functions for calculating and updating the positions of patches 
- *        within an array. These positions are determined based on the array's grid position, 
- *        the number of patches in the X and Y directions, spacing between patches, 
- *        and the rotation of the array.
+ * @brief Calculation and rotation of patch positions within a tile array.
+ * 
+ * This file contains functions to calculate the positions of patches within a tile array,
+ * apply rotations to the array, and initialize the patch positions. The functions are 
+ * designed to handle various rotations and spacing configurations.
  * 
  * @author Nicholas Antoniades
  * @date 27 April 2024
