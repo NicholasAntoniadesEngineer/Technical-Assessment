@@ -1,7 +1,9 @@
 /**
  * @file app_main.cpp
  * @brief This file contains the main function, GPIO configuration, and operational tests for the ATSAMV71
- * microcontroller. It sets up various GPIO pins for UART transmission and reception, analogue functionality, 
+ * microcontroller. 
+ *
+ * It sets up various GPIO pins for UART transmission and reception, analogue functionality, 
  * and standard input/output operations. The main function initializes these configurations and executes 
  * the necessary tests to verify the setup.
  * 
