@@ -25,11 +25,11 @@
  * @return OK if successful, an error code otherwise.
  */
 STATUS project_algorithms_calc_patch_pose( const uint16_t array_array_col,
-										      const uint16_t array_array_row,
-											  const int nx,
-											  const int ny,
-											  const double spacing,
-											  struct algorithm_EW_patch_t *patches)
+					   const uint16_t array_array_row,
+					   const int nx,
+					   const int ny,
+					   const double spacing,
+					   struct algorithm_EW_patch_t *patches)
 {
     double array_x_offset = array_array_col * spacing * nx;
     double array_y_offset = array_array_row * spacing * ny;
@@ -63,10 +63,10 @@ STATUS project_algorithms_calc_patch_pose( const uint16_t array_array_col,
  * @param patches Array of patches to be updated.
  * @return OK if successful, an error code otherwise.
  */
- STATUS project_algorithms_rot_pos_update(const uint16_t array_rotation,
-											int nx,
-											int ny,
-											struct algorithm_EW_patch_t *patches)
+STATUS project_algorithms_rot_pos_update(const uint16_t array_rotation,
+					 int nx,
+					 int ny,
+					 struct algorithm_EW_patch_t *patches)
 {
     struct algorithm_EW_patch_t temp_patches[nx * ny];
 
@@ -121,12 +121,12 @@ STATUS project_algorithms_calc_patch_pose( const uint16_t array_array_col,
  * @return OK if successful, an error code otherwise.
  */
 STATUS project_algorithms_init_patches(struct algorithm_EW_patch_t *patches,
-										  const uint16_t array_rotation,
-										  const uint16_t array_array_col,
-										  const uint16_t array_array_row,
-										  const uint16_t number_of_patches_x,
-										  const uint16_t number_of_patches_y,
-										  const double patch_spacing)
+				       const uint16_t array_rotation,
+				       const uint16_t array_array_col,
+				       const uint16_t array_array_row,
+				       const uint16_t number_of_patches_x,
+				       const uint16_t number_of_patches_y,
+				       const double patch_spacing)
 {
 	// determine array pose within the system
 	project_algorithms_calc_patch_pose(array_array_col, array_array_row, number_of_patches_x, number_of_patches_y, patch_spacing, patches);
