@@ -1,7 +1,14 @@
 /**
- * ATSAMV71.cpp
- * Author: Nicholas
+ * @file ATSAMV71.cpp
+ * @brief GPIO configuration and control implementation for ATSAMV71.
+ * This file provides the implementation for configuring, setting, and reading GPIO pins 
+ * on the ATSAMV71 microcontroller. It includes both a mock implementation for testing 
+ * and a hardware-specific implementation for actual deployment.
+ * 
+ * @author Nicholas Antoniades
+ * @date 29 April 2024
  */
+
 
 #include "ATSAMV71.h"
 #include <iostream>
