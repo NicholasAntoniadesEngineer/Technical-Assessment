@@ -18,5 +18,4 @@ Contains example code for algorithm development, including unit tests and specif
 
 ## Driver Development 
 #### (other_example_code/driver_development)
-Example code for interfacing with VectorNav sensors via UART communication. Functions for initializing,
-configuring, and communicating with VectorNav sensors.
+Example code for interfacing with hardware such as inertial sensors via diffierent forms of digital comms. 
