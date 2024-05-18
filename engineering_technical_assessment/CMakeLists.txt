@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)  
 
-project(EmbeddedSoftwareHomework)     
+project(embedded_software_technical_assessment)     
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
