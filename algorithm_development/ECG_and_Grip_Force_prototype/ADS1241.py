@@ -112,5 +112,4 @@ if __name__ == "__main__":
             print("Process interrupted")
             break
         finally:
-            f.close()
             GPIO.cleanup()
