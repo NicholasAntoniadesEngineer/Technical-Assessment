@@ -147,7 +147,7 @@ bool GPIO::_mock_GPIO_read(Port port, int pin)
 }
 
 //==============================================================================
-// Private functions for _real hardware implementation (used in deployment)
+// Private functions for real hardware implementation (used in deployment)
 //==============================================================================
 
 /**
