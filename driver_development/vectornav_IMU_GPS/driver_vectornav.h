@@ -15,14 +15,12 @@
 #pragma once
 
 #include <stdbool.h>
-
 #include "config.h"
-
 #include "driver_uart.h"
 #include "console_commands.h"
 
-#define UART_DMA_READ_BUF_SIZE 256
-#define VN310_COMMAND_BUFFER_SIZE 100
+#define UART_DMA_READ_BUF_SIZE       256
+#define VN310_COMMAND_BUFFER_SIZE    100
 
 #define VECTORNAV_HEADER             "$VN"
 #define VECTORNAV_ERR                "ERR"
@@ -37,13 +35,15 @@
 #define VECTORNAV_CRLF               "\r\n"
 #define VECTORNAV_SYNC_BYTE          "\xFA"
 
-enum vectornav_msg_type{
+enum vectornav_msg_type
+{
     MSG_ASYNC  = 0,
     MSG_BINARY = 1,  
     MSG_ERROR  = 2, 
 };
 
-enum vectornav_async_mode{
+enum vectornav_async_mode
+{
     ASYNC_MODE_NONE       = 0,  // User message is not automatically sent out either serial port
     ASYNC_MODE_PORT_1     = 1,  // Message is sent out serial port 1 at a fixed rate
     ASYNC_MODE_PORT_2     = 2,  // Message is sent out serial port 2 at a fixed rate
