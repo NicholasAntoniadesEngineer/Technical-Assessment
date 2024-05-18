@@ -1,9 +1,9 @@
 """
 @file BMI160.py
-@brief BMI160 python driver for initial integration with NVIDIA Jetson
+@brief BMI160 python driver for initial integration with a Raspberry Pi
 
 This file contains the implementation for configuring, setting, and reading 
-data from the BMI160 sensor using SPI on an NVIDIA Jetson device.
+data from the BMI160 sensor using SPI on a Raspberry Pi.
 
 @date April 2022
 @version 1.0
