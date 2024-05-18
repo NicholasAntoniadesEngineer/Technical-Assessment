@@ -24,10 +24,10 @@
 #define UART_DMA_READ_BUF_SIZE 256
 #define VN310_COMMAND_BUFFER_SIZE 100
 
-#define VECTORNAV_HEADER  			 "$VN"
-#define VECTORNAV_ERR    	  		 "ERR"
-#define VECTORNAV_RESET_CMD	  		 "RST"
-#define VECTORNAV_RESET_FS_CMD	  	 "RFS"
+#define VECTORNAV_HEADER             "$VN"
+#define VECTORNAV_ERR                "ERR"
+#define VECTORNAV_RESET_CMD          "RST"
+#define VECTORNAV_RESET_FS_CMD       "RFS"
 #define VECTORNAV_RRG_CMD 			 "RRG"
 #define VECTORNAV_WRG_CMD 			 "WRG"
 #define VECTORNAV_WRITE_SETTINGS_CMD "WNV"
