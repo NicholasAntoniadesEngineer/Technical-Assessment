@@ -1,5 +1,5 @@
 """
-@file adc_spi_rpi.py
+@file ADS1241.py
 @brief ADS1241 ADC integration with Raspberry Pi
 
 This file contains the implementation for configuring, setting, and reading 
