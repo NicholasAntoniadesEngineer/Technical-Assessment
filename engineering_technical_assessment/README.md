@@ -5,7 +5,7 @@ This repo will be used to hold the assignment set out as part of the interview p
 
 1. To build the project run ./build_project.sh
 2. To run the demo app enter the build directory and run ./AppMain
-3. Comment out add_definitions(-DMOCK_TEST) in CMakeLists.txt to build for target hardware, otherwise it will build the project to run the mock interfface for running on a pc.
+3. Comment out add_definitions(-DMOCK_TEST) in CMakeLists.txt to build for target hardware, otherwise it will build the project to run the mock interface for running on a pc.
 
 # Open subject for reflection
 
