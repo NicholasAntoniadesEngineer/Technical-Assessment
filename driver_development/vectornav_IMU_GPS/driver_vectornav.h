@@ -31,10 +31,10 @@
 #define VECTORNAV_RRG_CMD            "RRG"
 #define VECTORNAV_WRG_CMD            "WRG"
 #define VECTORNAV_WRITE_SETTINGS_CMD "WNV"
-#define VECTORNAV_ASYNC_CMD 		 "ASY"
-#define VECTORNAV_BOM_CMD	  		 "BOM"
-#define VECTORNAV_NO_CRC  			 "XX"
-#define VECTORNAV_CRLF    			 "\r\n"
+#define VECTORNAV_ASYNC_CMD          "ASY"
+#define VECTORNAV_BOM_CMD            "BOM"
+#define VECTORNAV_NO_CRC             "XX"
+#define VECTORNAV_CRLF               "\r\n"
 #define VECTORNAV_SYNC_BYTE          "\xFA"
 
 enum vectornav_msg_type{
