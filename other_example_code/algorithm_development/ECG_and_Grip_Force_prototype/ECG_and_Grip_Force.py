@@ -1,9 +1,9 @@
 """
 @file ecg_adc_spi.py
-@brief ADS1293 ECG and ADS1241 ADC integration with NVIDIA Jetson
+@brief ADS1293 ECG and ADS1241 ADC integration with Raspberry Pi
 
 This file contains the implementation for configuring, setting, and reading 
-data from the ADS1293 ECG sensor and ADS1241 ADC using SPI on an NVIDIA Jetson device.
+data from the ADS1293 ECG sensor and ADS1241 ADC using SPI on a Raspberry Pi.
 
 @date April 2022
 @version 1.0
