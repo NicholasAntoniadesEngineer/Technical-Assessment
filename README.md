@@ -1,6 +1,6 @@
 # Repository overiew
 
-This repository contains the assignment set out as part of an interview process for an embedded software role, 
+This repository contains an embedded software technical assessment, 
 along with supporting code demonstrating my work quality. This will be an ongoing development,
 becoming more refined over time.
 
