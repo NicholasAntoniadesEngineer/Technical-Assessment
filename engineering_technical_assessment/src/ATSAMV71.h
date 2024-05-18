@@ -40,7 +40,6 @@ typedef enum {
     NoPull
 } Mode;
 
-
 #define PMC_BASE_ADDR 0x400E0600U    // Base address for PMC (Power Management Controller)
 #define PIOA_BASE_ADDR 0x400E0E00U   // Base address for PIOA (Parallel I/O Controller A)
 #define PIOB_BASE_ADDR 0x400E1000U   // Base address for PIOB (Parallel I/O Controller B)
@@ -63,7 +62,14 @@ public:
     static bool configure(Port port, int pin, Function function, Mode mode);
     static bool set(Port port, int pin, bool pin_state);
     static bool read(Port port, int pin);
+private:
+    static bool _mock_GPIO_configure(Port port, int pin, Function function, Mode mode);
+    static bool _mock_GPIO_set(Port port, int pin, bool pin_state);
+    static bool _mock_GPIO_read(Port port, int pin);
+
+    static bool _real_GPIO_configure(Port port, int pin, Function function, Mode mode);
+    static bool _real_GPIO_set(Port port, int pin, bool pin_state);
+    static bool _real_GPIO_read(Port port, int pin);
 };
 
-#endif
-
+#endif // ATSAMV71_H

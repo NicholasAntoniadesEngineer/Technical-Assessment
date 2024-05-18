@@ -23,6 +23,5 @@ fi
 
 echo "Build successful! Executable is ready to run."
 
-# Optionally, you can run the executable
 echo "Running the application..."
 ./AppMain

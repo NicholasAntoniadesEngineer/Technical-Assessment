@@ -3,23 +3,101 @@
  * @brief GPIO configuration and control implementation for ATSAMV71.
  *
  * This file provides the implementation for configuring, setting, and reading GPIO pins 
- * on the ATSAMV71 microcontroller. It includes both a mock implementation for testing 
+ * on the ATSAMV71 microcontroller. It includes both a _mock implementation for testing 
  * and a hardware-specific implementation for actual deployment.
  * 
  * @author Nicholas Antoniades
  * @date 29 April 2024
  */
 
-
 #include "ATSAMV71.h"
 #include <iostream>
 
-#ifdef MOCK_TEST
-// Mock implementation
 
+//==============================================================================
+// Public functions for GPIO operations (used by external code)
+//==============================================================================
+
+/**
+ * @brief Configures a GPIO pin.
+ * 
+ * This function selects either the mock or real implementation based on the 
+ * compile-time flag MOCK_TEST. It configures the mode and function of a GPIO pin.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @param function Function of GPIO 
+ * @param mode Mode of GPIO 
+ * @return bool true if successful, false otherwise
+ */
 bool GPIO::configure(Port port, int pin, Function function, Mode mode) 
 {
-    std::cout << "Mock configuring GPIO \n";
+#ifdef MOCK_TEST
+    return _mock_GPIO_configure(port, pin, function, mode);
+#else
+    return _real_GPIO_configure(port, pin, function, mode);
+#endif
+}
+
+/**
+ * @brief Sets a GPIO pin state.
+ * 
+ * This function selects either the mock or real implementation based on the 
+ * compile-time flag MOCK_TEST. It sets the state (high or low) of a GPIO pin.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @param pin_state State to set the pin (true for high, false for low)
+ * @return bool true if successful, false otherwise
+ */
+bool GPIO::set(Port port, int pin, bool pin_state) 
+{
+#ifdef MOCK_TEST
+    return _mock_GPIO_set(port, pin, pin_state);
+#else
+    return _real_GPIO_set(port, pin, pin_state);
+#endif
+}
+
+/**
+ * @brief Reads the state of a GPIO pin.
+ * 
+ * This function selects either the mock or real implementation based on the 
+ * compile-time flag MOCK_TEST. It reads the current state (high or low) of a GPIO pin.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @return bool true if pin is high, false if pin is low
+ */
+bool GPIO::read(Port port, int pin) 
+{
+#ifdef MOCK_TEST
+    return _mock_GPIO_read(port, pin);
+#else
+    return _real_GPIO_read(port, pin);
+#endif
+}
+
+
+//==============================================================================
+// Private functions for mock implementation (used for testing purposes)
+//==============================================================================
+
+/**
+ * @brief mock implementation of GPIO pin configuration.
+ * 
+ * This function simulates configuring a GPIO pin for testing purposes.
+ * It prints the configuration details to the console.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @param function Function of GPIO 
+ * @param mode Mode of GPIO 
+ * @return bool true
+ */
+bool GPIO::_mock_GPIO_configure(Port port, int pin, Function function, Mode mode) 
+{
+    std::cout << "_mock configuring GPIO \n";
     std::cout << " - Port     : " << static_cast<int>(port) << "\n";
     std::cout << " - Pin      : " << pin << "\n";   
     std::cout << " - Function : " << static_cast<int>(function) << "\n";
@@ -28,9 +106,20 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
     return true;
 }
 
-bool GPIO::set(Port port, int pin, bool pin_state) 
+/**
+ * @brief mock implementation of setting a GPIO pin state.
+ * 
+ * This function simulates setting a GPIO pin state for testing purposes.
+ * It prints the pin state details to the console.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @param pin_state State to set the pin (true for high, false for low)
+ * @return bool true
+ */
+bool GPIO::_mock_GPIO_set(Port port, int pin, bool pin_state) 
 {
-    std::cout << "Mock setting GPIO \n";  
+    std::cout << "_mock setting GPIO \n";  
     std::cout << " - Port   : " << static_cast<int>(port) << "\n";
     std::cout << " - Pin    : " << pin << "\n";  
     std::cout << " - State  : " << pin_state << "\n";  
@@ -38,17 +127,28 @@ bool GPIO::set(Port port, int pin, bool pin_state)
     return true;
 }
 
-bool GPIO::read(Port port, int pin) 
+/**
+ * @brief mock implementation of reading a GPIO pin state.
+ * 
+ * This function simulates reading a GPIO pin state for testing purposes.
+ * It prints the pin state details to the console.
+ * 
+ * @param port Port number of GPIO
+ * @param pin Pin number of GPIO
+ * @return bool true
+ */
+bool GPIO::_mock_GPIO_read(Port port, int pin) 
 {
-    std::cout << "Mock read GPIO \n";
+    std::cout << "_mock read GPIO \n";
     std::cout << " - Port   : " << static_cast<int>(port) << "\n";
     std::cout << " - Pin    : " << pin << "\n";     
     std::cout << " \n";
     return true;
 }
 
-#else
-// Compile with hardware memory address
+//==============================================================================
+// Private functions for _real hardware implementation (used in deployment)
+//==============================================================================
 
 /**
  * Configures a specific GPIO pin.
@@ -59,8 +159,7 @@ bool GPIO::read(Port port, int pin)
  * @param mode Mode of GPIO 
  * @return bool true if successful, false otherwise
  */
-
-bool GPIO::configure(Port port, int pin, Function function, Mode mode) 
+bool GPIO::_real_GPIO_configure(Port port, int pin, Function function, Mode mode) 
 {
     uintptr_t pio_base_addr;
     uintptr_t pmc_pcer_offset;
@@ -110,7 +209,7 @@ bool GPIO::configure(Port port, int pin, Function function, Mode mode)
  * @param pin_state State to set the pin (true for high, false for low)
  * @return bool true if successful, false otherwise
  */
-bool GPIO::set(Port port, int pin, bool pin_state) 
+bool GPIO::_real_GPIO_set(Port port, int pin, bool pin_state) 
 {
     uintptr_t pio_base_addr;
 
@@ -149,7 +248,7 @@ bool GPIO::set(Port port, int pin, bool pin_state)
  * @param pin Pin number of GPIO
  * @return bool true if pin is high, false if pin is low
  */
-bool GPIO::read(Port port, int pin) 
+bool GPIO::_real_GPIO_read(Port port, int pin) 
 {
     uintptr_t pio_base_addr;
 
@@ -176,7 +275,3 @@ bool GPIO::read(Port port, int pin)
 
     return pin_state;  
 }
-
-#endif
-
-
