@@ -330,16 +330,16 @@ STATUS driver_vectornav_set_configuration_0(struct driver_vectornav_state_t *sta
 
     char command[64]; 
     snprintf(command, sizeof(command), "%s%s,%d,%d,%d,%x,%x,%x*%s%s",
-    		VECTORNAV_HEADER,
-			VECTORNAV_WRG_CMD,
-			BINARY_OUTPUT_REGISTER_1,
-			ASYNC_MODE_PORT_1,
-			RATE_DIVISOR_4,
-            output_group,
-			group_field_1,
-			group_field_4,
-			VECTORNAV_NO_CRC,
-			VECTORNAV_CRLF);
+		VECTORNAV_HEADER,
+		VECTORNAV_WRG_CMD,
+		BINARY_OUTPUT_REGISTER_1,
+		ASYNC_MODE_PORT_1,
+		RATE_DIVISOR_4,
+		output_group,
+		group_field_1,
+		group_field_4,
+		VECTORNAV_NO_CRC,
+		VECTORNAV_CRLF);
 
     size_t command_size = strlen(command);
 
@@ -360,12 +360,12 @@ STATUS driver_vectornav_set_asynchronous_output(struct driver_vectornav_state_t 
 {
     char command[64]; 
     snprintf(command, sizeof(command), "%s%s,%d,%s*%s%s",
-    		VECTORNAV_HEADER,
-			VECTORNAV_WRG_CMD,
-			ASYNC_DATA_OUTPUT_TYPE_REGISTER,
-			setting,
-			VECTORNAV_NO_CRC,
-			VECTORNAV_CRLF);
+		VECTORNAV_HEADER,
+		VECTORNAV_WRG_CMD,
+		ASYNC_DATA_OUTPUT_TYPE_REGISTER,
+		setting,
+		VECTORNAV_NO_CRC,
+		VECTORNAV_CRLF);
  
     size_t command_size = strlen(command);
 
@@ -498,11 +498,11 @@ STATUS driver_vectornav_output_pause(struct driver_vectornav_state_t *state)
 {
     char command[32];
     snprintf(command, sizeof(command), "%s%s,%d*%s%s",
-			VECTORNAV_HEADER,
-			VECTORNAV_ASYNC_CMD, 
-			ASYNC_MODE_NONE, 
-			VECTORNAV_NO_CRC, 
-			VECTORNAV_CRLF);
+		VECTORNAV_HEADER,
+		VECTORNAV_ASYNC_CMD, 
+		ASYNC_MODE_NONE, 
+		VECTORNAV_NO_CRC, 
+		VECTORNAV_CRLF);
 
     size_t command_size = strlen(command);
 
