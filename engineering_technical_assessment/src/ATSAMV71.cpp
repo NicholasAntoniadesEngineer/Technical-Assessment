@@ -206,10 +206,10 @@ bool GPIO::_real_GPIO_configure(Port port, int pin, Function function, Mode mode
     // If the bit position is 0, return false
     if (bit_position == 0) return false;
 
-    // Enable peripheral clock for the selected port
+    // Enable peripheral clock for the selected peripheral
     REG32(PMC_BASE_ADDR + pmc_pcer_offset) |= (1 << bit_position);
 
-    // Configure the pin mode
+    // Configure the peripheral mode
     if (mode == OUTPUT) {
         REG32(pio_base_addr + PIO_OER_OFFSET) |= (1 << pin);  // Set pin as output
     } else {
