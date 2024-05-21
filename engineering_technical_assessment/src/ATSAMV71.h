@@ -43,16 +43,17 @@ typedef enum {
     NoPull
 } Mode;
 
-// Base addresses for PMC and PIO
+// Base addresses offsets for PMC 
 #define PMC_BASE_ADDR 0x400E0600U    // Base address for PMC (Power Management Controller)
+
+#define PMC_PCER0_OFFSET 0x0010U     // Offset for PMC_PCER0 (Peripheral Clock Enable Register 0)
+#define PMC_PCER1_OFFSET 0x0100U     // Offset for PMC_PCER1 (Peripheral Clock Enable Register 1)
+
+// Base addresses and offsets for PIO
 #define PIOA_BASE_ADDR 0x400E0E00U   // Base address for PIOA (Parallel I/O Controller A)
 #define PIOB_BASE_ADDR 0x400E1000U   // Base address for PIOB (Parallel I/O Controller B)
 #define PIOC_BASE_ADDR 0x400E1200U   // Base address for PIOC (Parallel I/O Controller C)
 #define PIOD_BASE_ADDR 0x400E1400U   // Base address for PIOD (Parallel I/O Controller D)
-
-// Offsets for PMC and PIO registers
-#define PMC_PCER0_OFFSET 0x0010U     // Offset for PMC_PCER0 (Peripheral Clock Enable Register 0)
-#define PMC_PCER1_OFFSET 0x0100U     // Offset for PMC_PCER1 (Peripheral Clock Enable Register 1)
 
 #define PIO_OER_OFFSET 0x0010U       // Offset for PIO_OER (Output Enable Register)
 #define PIO_ODR_OFFSET 0x0014U       // Offset for PIO_ODR (Output Disable Register)
