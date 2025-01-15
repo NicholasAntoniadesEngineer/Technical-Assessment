@@ -4,9 +4,6 @@ This repository contains an embedded software technical assessment,
 along with supporting code demonstrating my work quality. This will be an ongoing development,
 becoming more refined over time.
 
-
-# Content Overview
-
 ## Engineering Technical Assessment 
 This directory contains the main project for the technical assessment, including source code, headers,
 build scripts, and documentation.
