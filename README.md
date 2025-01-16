@@ -9,7 +9,7 @@ This directory contains the main project for the technical assessment, including
 build scripts, and documentation.
 
 ## Algorithm Development 
-Contains example code for algorithm development, including unit tests and specific implementations.
+A code example of work that I have done for algorithm development, including unit tests and specific implementations.
 
 ## Driver Development 
-Example code for interfacing with hardware such as inertial sensors via diffierent forms of digital comms. 
+A code example of work that I have done for drivers for interfacing with hardware such as inertial sensors via diffierent forms of digital comms. 
