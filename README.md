@@ -6,5 +6,6 @@ A collection of projects demonstrating technical proficiency in embedded systems
 - Embedded C/C++ and Python
 - Hardware Drivers
 - phased Array Antennas
+- STM32 Flasher tool
 
 Each project directory contains its own documentation with usage details.
