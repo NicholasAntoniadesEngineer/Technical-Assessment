@@ -15,7 +15,7 @@
 #include <stdio.h>
 
 #include "console_commands.h"
-#include "driver_vectornav.h"
+#include "vn310.h"
 #include "driver_uart.h"
     
 /**
