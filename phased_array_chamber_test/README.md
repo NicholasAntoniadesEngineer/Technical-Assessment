@@ -20,23 +20,4 @@ Key system parameters can be configured in `lib/config.py`:
 - Serial communication settings
 - Test output paths
 
-## Key Components
-
-### Array Controller
-- Manages phased array antenna control
-- Handles power cycling
-- Controls array pointing and attenuation
-- Supports multiple array interfaces
-
-### Chamber Controller
-- Coordinates chamber equipment
-- Manages sweep sequences
-- Controls turn table positioning
-- Handles measurement data collection
-
-### Hardware Interface
-- Provides low-level hardware communication
-- Manages serial communication
-- Implements command protocols
-
 
