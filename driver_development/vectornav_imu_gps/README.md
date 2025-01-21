@@ -41,14 +41,3 @@ vn310_init(&state, &config);
 vn310_imu_data_t imu_data;
 vn310_read_imu_measurements(&state, &imu_data);
 ```
-
-## Files
-- `vn310.h/c`: Main driver implementation
-- `driver_vectornav.h/c`: Hardware abstraction layer
-
-## References
-- [VN-310 User Manual](https://www.vectornav.com/docs/default-source/documentation/vn-310-documentation/vn-310-user-manual-(um005).pdf)
-- [VectorNav Interface Protocol](https://www.vectornav.com/docs/default-source/documentation/vn-310-documentation/vn-310-interface-protocol-(um004).pdf)
-
-## Author
-Nicholas Antoniades (January 2024)
