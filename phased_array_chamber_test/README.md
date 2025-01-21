@@ -11,33 +11,14 @@ This project provides an automated testing framework for characterizing phased a
 - Real-time measurement data collection
 - Integrated chamber control system
 
-## Project Structure
-```
-phased_array_chamber_test/
-├── phased_array_sweep_automation.py  # Main automation script
-└── lib/                             # Supporting modules
-    ├── array_controller.py          # Phased array control interface
-    ├── chamber_controller.py        # Chamber equipment control
-    ├── config.py                    # System configuration
-    ├── hardware_interface.py        # Hardware communication
-    ├── system_messages.py           # System command definitions
-    └── __init__.py
-```
-
 ## Configuration
+
 Key system parameters can be configured in `lib/config.py`:
 - Frequency settings (Modem and Ku-band frequencies)
 - Sweep angle ranges (Theta and Phi)
 - Turn table limits and positions
 - Serial communication settings
 - Test output paths
-
-## Usage
-1. Configure the system parameters in `config.py`
-2. Run the main automation script:
-```bash
-python phased_array_sweep_automation.py
-```
 
 ## Key Components
 
@@ -58,21 +39,4 @@ python phased_array_sweep_automation.py
 - Manages serial communication
 - Implements command protocols
 
-## Test Sequence
-1. System initialization and power cycling
-2. Array configuration for specified frequency
-3. Automated sweep through configured angles
-4. Data collection at each position
-5. Results storage and processing
 
-## Requirements
-- Python 3.x
-- Serial communication capability
-- Compatible chamber equipment
-- Phased array antenna system
-
-## Notes
-- Ensure proper hardware connections before running tests
-- Verify chamber calibration before measurements
-- Monitor system during long sweep sequences
-- Check output data for consistency 
