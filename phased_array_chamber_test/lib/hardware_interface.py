@@ -1,15 +1,14 @@
 """
 ================================================================================
-Hardware interface module for phased array antenna control
-Handles serial communication and basic hardware control functions
+Hardware interface module for system communication
 ================================================================================
 """
 
 import time
 import serial
-from typing import List
+from typing import List, Optional
 
-from .config import SERIAL_PORT, SERIAL_BAUD
+from ..config import SERIAL_PORT, SERIAL_BAUD
 
 class HardwareInterface:
     @staticmethod

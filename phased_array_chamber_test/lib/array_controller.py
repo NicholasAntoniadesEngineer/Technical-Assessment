@@ -10,7 +10,7 @@ from typing import List, Tuple, Optional
 
 from .hardware_interface import HardwareInterface
 from .system_messages import SystemMessages
-from .config import ARRAY_INTERFACE, MODEM_FREQ, POL_ANGLE
+from ..config import ARRAY_INTERFACE, MODEM_FREQ, POL_ANGLE
 
 class ArrayController:
     def __init__(self):

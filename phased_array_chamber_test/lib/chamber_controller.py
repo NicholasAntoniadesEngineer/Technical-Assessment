@@ -1,7 +1,6 @@
 """
 ================================================================================
-Chamber controller module for antenna testing
-Handles chamber equipment control and sweep operations
+Chamber controller module for anechoic chamber control
 ================================================================================
 """
 
@@ -10,7 +9,8 @@ import random
 from datetime import datetime
 from typing import Dict, Union, List
 
-from .config import (
+from .hardware_interface import HardwareInterface
+from ..config import (
     ARRAY_INTERFACE, SYSTEM_CONFIGURATION, PLOT_SAVE_PATH,
     SWEEP_BOTH_DIRECTIONS, ELEVATION_PHI_ADJUSTMENT, TURN_TABLE_ELV_LIMIT,
     AZ_START, AZ_FINISH, EL_START, EL_FINISH,

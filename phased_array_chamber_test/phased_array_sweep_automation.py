@@ -17,7 +17,7 @@ Date: 2024-10-16
 
 from lib.array_controller import ArrayController
 from lib.chamber_controller import ChamberController
-from lib.config import MODEM_FREQ, KU_FREQ_RANGE
+from config import MODEM_FREQ, KU_FREQ_RANGE
 
 
 def run_static_pose_sweep():
