@@ -1,8 +1,14 @@
 /**
  * @file 74hc165pw.c
+ * @brief Implementation file for the 74HC165 shift register driver.
+ * 
+ * This file contains the implementation of functions for initializing, configuring,
+ * and controlling the 74HC165 8-bit parallel-in, serial-out shift register. It provides
+ * functionality for reading parallel data inputs and shifting them out serially, along with
+ * control over the parallel load and output enable operations.
+ * 
  * @author Nicholas Antoniades
  * @date July 11, 2023
- * @brief 74HC165 is an 8-bit serial or parallel-in/serial-out shift register
  */
 #include <stdint.h>
 #include <string.h>
@@ -11,9 +17,10 @@
 
 /**
  * @brief Initialize GPIO for the 74HC165 Shift Register
- * @param state 74HC165 driver state with pin and port details
+ * @param state Pointer to the state structure containing pin configurations
+ * @return STATUS indicating success or failure
  */
-int 74hc165pw_init_GPIO(74HC165_state_t *state)
+STATUS 74hc165pw_init_GPIO(74HC165_state_t *state)
 {
     GPIO_InitTypeDef GPIO_InitStruct = {0};
 
@@ -43,39 +50,43 @@ int 74hc165pw_init_GPIO(74HC165_state_t *state)
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(state->config.Q7_pin->port, &GPIO_InitStruct);
-	return R2_OK;
+    return R2_OK;
 }
 
 /**
- * @brief 74HC165 driver enable the outputs.
- * @param state Pointer to the state structure.
+ * @brief Enable the outputs of the 74HC165 shift register
+ * @param state Pointer to the state structure
+ * @return STATUS indicating success or failure
  */
-int 74hc165pw_enable_outputs(74HC165_state_t *state)
+STATUS 74hc165pw_enable_outputs(74HC165_state_t *state)
 {
     HAL_GPIO_WritePin(state->config.OE_pin->port, state->config.OE_pin->number, GPIO_PIN_SET);
     return R2_OK;
 }
 
-int 74hc165pw_init(74HC165_state_t *state, 74HC165_config_t const *config)
+/**
+ * @brief Initialize the 74HC165 shift register
+ * @param state Pointer to the state structure to initialize
+ * @param config Pointer to the configuration structure
+ * @return STATUS indicating success or failure
+ */
+STATUS 74hc165pw_init(74HC165_state_t *state, 74HC165_config_t const *config)
 {
-	state->config = *config;
-
-    // Initialise 74HC165 shift register
-	74hc165pw_init_GPIO(state);
-
-	return R2_OK;
+    state->config = *config;
+    74hc165pw_init_GPIO(state);
+    return R2_OK;
 }
 
 /**
- * @brief Shift in a single bit for 74HC165 driver
- * @param state 74HC165 state structure
- * @return Shifted bit value
+ * @brief Shift in a single bit from the 74HC165 shift register
+ * @param state Pointer to the state structure
+ * @return STATUS indicating success or failure
  */
-int 74hc165pw_shift_bit(74HC165_state_t *state)
+STATUS 74hc165pw_shift_bit(74HC165_state_t *state)
 {
-	uint8_t read_bit;
+    uint8_t read_bit;
 
-	read_bit = HAL_GPIO_ReadPin(state->config.Q7_pin->port, state->config.Q7_pin->number);
+    read_bit = HAL_GPIO_ReadPin(state->config.Q7_pin->port, state->config.Q7_pin->number);
     HAL_GPIO_WritePin(state->config.CP_pin->port, state->config.CP_pin->number, GPIO_PIN_RESET);
     HAL_Delay(HC165_DELAY);
     HAL_GPIO_WritePin(state->config.CP_pin->port, state->config.CP_pin->number, GPIO_PIN_SET);
@@ -86,33 +97,27 @@ int 74hc165pw_shift_bit(74HC165_state_t *state)
 }
 
 /**
- * @brief Read the parallel inputs for 74HC165 driver
- * @param state 74HC165 state structure
- * @return Pair of values representing the parallel inputs and the serial data
+ * @brief Read the parallel inputs from the 74HC165 shift register
+ * @param state Pointer to the state structure
+ * @return STATUS indicating success or failure
  */
-int 74hc165pw_read_parallel_inputs(74HC165_state_t *state)
+STATUS 74hc165pw_read_parallel_inputs(74HC165_state_t *state)
 {
-    /* Set the load pin to HIGH to prepare for reading the inputs, By setting the load pin to HIGH,
-     * the 74HC165 captures the current state of the input pins.
-     * After setting the load pin to HIGH, it needs to be set to LOW,
-     * this initiates the transfer of the captured input data from the shift register to the output latch.
-     * This transition causes the 74HC165 to make the parallel inputs available for reading.
-     */
     uint8_t parallel_data_byte = 0;
     uint8_t serial_data_byte = 0;
     uint8_t bit = 0;
 
     for (int i = 7; i >= 0; i--)
     {
-    	74hc165pw_shift_bit(state);
-    	bit = state->read_bit;
+        74hc165pw_shift_bit(state);
+        bit = state->read_bit;
         parallel_data_byte |= (bit << i);
     }
 
     for (int j = 7; j >= 0; j--)
     {
-    	74hc165pw_shift_bit(state);
-    	bit = state->read_bit;
+        74hc165pw_shift_bit(state);
+        bit = state->read_bit;
         serial_data_byte |= (bit << j);
     }
 
@@ -122,14 +127,24 @@ int 74hc165pw_read_parallel_inputs(74HC165_state_t *state)
     return R2_OK;
 }
 
-int 74hc165pw_latch_low(74HC165_state_t *state)
+/**
+ * @brief Set the parallel load pin to low
+ * @param state Pointer to the state structure
+ * @return STATUS indicating success or failure
+ */
+STATUS 74hc165pw_latch_low(74HC165_state_t *state)
 {
-	HAL_GPIO_WritePin(state->config.PL_pin->port, state->config.PL_pin->number, GPIO_PIN_RESET);
-	return R2_OK;
+    HAL_GPIO_WritePin(state->config.PL_pin->port, state->config.PL_pin->number, GPIO_PIN_RESET);
+    return R2_OK;
 }
 
-int 74hc165pw_latch_high(74HC165_state_t *state)
+/**
+ * @brief Set the parallel load pin to high
+ * @param state Pointer to the state structure
+ * @return STATUS indicating success or failure
+ */
+STATUS 74hc165pw_latch_high(74HC165_state_t *state)
 {
-	HAL_GPIO_WritePin(state->config.PL_pin->port, state->config.PL_pin->number, GPIO_PIN_SET);
-	return R2_OK;
+    HAL_GPIO_WritePin(state->config.PL_pin->port, state->config.PL_pin->number, GPIO_PIN_SET);
+    return R2_OK;
 }
